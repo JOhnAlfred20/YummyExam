@@ -1,0 +1,91 @@
+body {
+    background-color: #4A90E2; /* لون خلفية هادئ */
+    color: #FFFFFF !important; /* نص أبيض */
+    overflow: hidden;
+}
+
+.nav-tab {
+    background-color: #357ABD; /* لون أغمق لتباين جيد */
+}
+
+.logo {
+    width: 30px;
+}
+
+i {
+    cursor: pointer;
+    color: #04356d;
+}
+
+.meal-layer {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    justify-content: center;
+    background-color: rgba(125, 125, 125, 0.536); /* لون داكن شفاف */
+    top: 100%;
+    transition: 2s;
+}
+
+.meal:hover .meal-layer {
+    top: 10px;
+}
+
+.side-nav-menu {
+    z-index: 99;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.alert {
+    width: fit-content;
+    background-color: #F39C12; /* لون دافئ */
+    color: #FFFFFF; /* نص أبيض */
+}
+
+.loading-screen {
+    z-index: 999;
+    display: flex;
+}
+
+.inner-loading-screen {
+    position: absolute;
+    z-index: 9;
+    background-color: #333333; /* لون داكن */
+    display: flex;
+}
+
+.placeholder {
+    background-color: #F39C12; /* لون مميز للنصوص الوهمية */
+}
+
+.loader {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #4A90E2; /* لون متناسق */
+    position: relative;
+}
+
+.loader:before,
+.loader:after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    inset: 0;
+    background: #FFFFFF; /* لون أبيض */
+    transform: rotate(0deg) translate(30px);
+    animation: rotate 1s ease infinite;
+}
+
+.loader:after {
+    animation-delay: 0.5s;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg) translate(30px);
+    }
+}
